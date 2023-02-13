@@ -1,6 +1,4 @@
 package com.example.calculator;
-import java.lang.Math;
-
 public class CalculatorController {
 
 

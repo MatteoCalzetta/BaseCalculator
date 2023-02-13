@@ -9,8 +9,9 @@ public class CalculatorControllerG {
     private String secondAddendum;
     private String operation;
     private String toPrint;
-    private String result;
     public void start() {
+        String printFirstAddendum = "Insert first addendum: ";
+        String printSecondAddendum = "Insert second addendum: ";
         CalculatorController calculatorController = new CalculatorController();
         CalculatorBean calculatorBean = new CalculatorBean();
         askPrint("Choose operations: 0 for '+', 1 for '-', 2 for '/', 3 for '*', 4 for natural logarithm, 5 for square :");
@@ -20,27 +21,27 @@ public class CalculatorControllerG {
             calculatorBean.setOperation(operation);
             switch(operation){
                 case "0":
-                    askPrint("Insert first addendum: ");
+                    askPrint(printFirstAddendum);
                     firstAddendum = reader.readLine();
-                    askPrint("Insert second addendum: ");
+                    askPrint(printSecondAddendum);
                     secondAddendum = reader.readLine();
                     calculatorBean.setFirstAddendum(firstAddendum);
                     calculatorBean.setSecondAddendum(secondAddendum);
                     LinePrinter.print(String.valueOf(calculatorController.addition(calculatorBean)));
                     break;
                 case "1":
-                    askPrint("Insert first addendum: ");
+                    askPrint(printFirstAddendum);
                     firstAddendum = reader.readLine();
-                    askPrint("Insert second addendum: ");
+                    askPrint(printSecondAddendum);
                     secondAddendum = reader.readLine();
                     calculatorBean.setFirstAddendum(firstAddendum);
                     calculatorBean.setSecondAddendum(secondAddendum);
                     LinePrinter.print(String.valueOf(calculatorController.subtraction(calculatorBean)));
                     break;
                 case "2":
-                    askPrint("Insert first addendum: ");
+                    askPrint(printFirstAddendum);
                     firstAddendum = reader.readLine();
-                    askPrint("Insert second addendum: ");
+                    askPrint(printSecondAddendum);
                     secondAddendum = reader.readLine();
                     calculatorBean.setFirstAddendum(firstAddendum);
                     calculatorBean.setSecondAddendum(secondAddendum);
@@ -52,16 +53,16 @@ public class CalculatorControllerG {
                     }
                     break;
                 case "3":
-                    askPrint("Insert first addendum: ");
+                    askPrint(printFirstAddendum);
                     firstAddendum = reader.readLine();
-                    askPrint("Insert second addendum: ");
+                    askPrint(printSecondAddendum);
                     secondAddendum = reader.readLine();
                     calculatorBean.setFirstAddendum(firstAddendum);
                     calculatorBean.setSecondAddendum(secondAddendum);
                     LinePrinter.print(String.valueOf(calculatorController.multiply(calculatorBean)));
                     break;
                 case "4":
-                    askPrint("Insert first addendum: ");
+                    askPrint(printFirstAddendum);
                     firstAddendum = reader.readLine();
                     calculatorBean.setFirstAddendum(firstAddendum);
                     if(calculatorBean.validation()){
@@ -73,7 +74,7 @@ public class CalculatorControllerG {
                     break;
 
                 case "5":
-                    askPrint("Insert first addendum: ");
+                    askPrint(printFirstAddendum);
                     firstAddendum = reader.readLine();
                     calculatorBean.setFirstAddendum(firstAddendum);
                     if(calculatorBean.validation()){

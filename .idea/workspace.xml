@@ -37,6 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/matteocalzetta/Desktop/Calcolatrice/Calculator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +52,10 @@
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f1733d01-7e8b-4b69-bfef-aec70e645b9e" name="Changes" comment="" />
@@ -59,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676285997942</updated>
       <workItem from="1676285998849" duration="3324000" />
+      <workItem from="1676291202807" duration="435000" />
     </task>
     <servers />
   </component>
