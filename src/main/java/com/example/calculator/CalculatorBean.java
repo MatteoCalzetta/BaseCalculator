@@ -12,8 +12,8 @@ public class CalculatorBean {
         if(operation.equals("2") && secondAddendum.substring(0,1).equals("0")){
             return false;
         }
-        if((operation.equals("4") && (Float.parseFloat(firstAddendum) <= 0)) || (operation.equals("5") && (Float.parseFloat(firstAddendum) <= 0))){
-            return false;
+        if(operation.equals("4") || (operation.equals("5") )){
+            return (Float.parseFloat(firstAddendum) <= 0);
         }
         return true;
     }
