@@ -91,6 +91,7 @@ public class CalculatorControllerG {
             }
         } catch (IOException e) {
             toPrint = "Something went wrong. Closing app. . .";
+            LinePrinter.print(toPrint);
         }
 
     }
