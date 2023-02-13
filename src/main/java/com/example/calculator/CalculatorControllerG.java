@@ -5,11 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CalculatorControllerG {
-    private String firstAddendum;
-    private String secondAddendum;
-    private String operation;
-    private String toPrint;
+
     public void start() {
+        String firstAddendum;
+        String secondAddendum;
+        String operation;
+        String toPrint;
         String printFirstAddendum = "Insert first addendum: ";
         String printSecondAddendum = "Insert second addendum: ";
         CalculatorController calculatorController = new CalculatorController();
