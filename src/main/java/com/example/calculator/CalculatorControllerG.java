@@ -5,17 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class CalculatorControllerG {
-
+    private String firstAddendum;
+    private String secondAddendum;
+    private String operation;
+    private String toPrint;
     public void start() {
-        String firstAddendum;
-        String secondAddendum;
-        String operation;
-        String toPrint;
         String printFirstAddendum = "Insert first addendum: ";
         String printSecondAddendum = "Insert second addendum: ";
         CalculatorController calculatorController = new CalculatorController();
         CalculatorBean calculatorBean = new CalculatorBean();
-        askPrint("Choose operations: 0 for '+', 1 for '-', 2 for '/', 3 for '*', 4 for natural logarithm, 5 for square :");
+        askPrint("Choose operations: 0 for '+', 1 for '-', 2 for '/', 3 for '*', 4 for natural logarithm, 5 for square, 6 for square root :");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             operation = reader.readLine();
@@ -85,13 +84,23 @@ public class CalculatorControllerG {
                         LinePrinter.print(toPrint);
                     }
                     break;
+                case "6":
+                    askPrint(printFirstAddendum);
+                    firstAddendum = reader.readLine();
+                    calculatorBean.setFirstAddendum(firstAddendum);
+                    if(calculatorBean.validation()){
+                        LinePrinter.print(String.valueOf(calculatorController.squareRoot(calculatorBean)));
+                    } else{
+                        toPrint = "Impossible squareRoot";
+                        LinePrinter.print(toPrint);
+                    }
+                    break;
                 default:
                     askPrint("No operations allowed. Closing app");
                     break;
             }
         } catch (IOException e) {
             toPrint = "Something went wrong. Closing app. . .";
-            LinePrinter.print(toPrint);
         }
 
     }
@@ -100,3 +109,5 @@ public class CalculatorControllerG {
         LinePrinter.print(toPrint);
     }
 }
+
+

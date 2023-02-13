@@ -26,4 +26,11 @@ public class CalculatorController {
     public double square(CalculatorBean calculatorBean) {
         return Math.sqrt(Double.parseDouble(calculatorBean.getFirstAddendum()));
     }
+
+    public double squareRoot(CalculatorBean calculatorBean) {
+        return Math.pow(Double.parseDouble(calculatorBean.getFirstAddendum()),0.5);
+    }
+
 }
+
+
