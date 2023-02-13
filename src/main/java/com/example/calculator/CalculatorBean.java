@@ -13,7 +13,7 @@ public class CalculatorBean {
             return false;
         }
         if(operation.equals("4") || (operation.equals("5") )){
-            return (Float.parseFloat(firstAddendum) <= 0);
+            return (Float.parseFloat(firstAddendum) >= 0);
         }
         return true;
     }
