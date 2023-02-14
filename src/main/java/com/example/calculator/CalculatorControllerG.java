@@ -74,7 +74,7 @@ public class CalculatorControllerG {
                         division(calculatorBean, String.valueOf(calculatorController.square(calculatorBean)), "Impossible square");
                         break;
                     default:
-                        askPrint("No operations allowed. Closing app");
+                        askPrint("No operations allowed");
                         break;
                 }
                 toPrint = "Press 0 to close calculator, anything to restart";
