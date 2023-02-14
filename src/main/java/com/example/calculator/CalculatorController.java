@@ -20,7 +20,7 @@ public class CalculatorController {
     }
 
     public double logarithm(CalculatorBean calculatorBean) {
-        return Math.log10(Double.parseDouble(calculatorBean.getFirstAddendum()));
+        return Math.log(Double.parseDouble(calculatorBean.getFirstAddendum()));
     }
 
     public double square(CalculatorBean calculatorBean) {
