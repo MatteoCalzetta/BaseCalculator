@@ -10,7 +10,7 @@ public class CalculatorControllerG {
         String toPrint;
         try {
             String choice = "1";
-            while(choice != "0") {
+            while(!choice.equals("0")) {
                 String firstAddendum;
                 String secondAddendum;
                 String operation;
@@ -49,12 +49,7 @@ public class CalculatorControllerG {
                         secondAddendum = reader.readLine();
                         calculatorBean.setFirstAddendum(firstAddendum);
                         calculatorBean.setSecondAddendum(secondAddendum);
-                        if (calculatorBean.validation()) {
-                            LinePrinter.print(String.valueOf(calculatorController.division(calculatorBean)));
-                        } else {
-                            toPrint = "Impossible division";
-                            LinePrinter.print(toPrint);
-                        }
+                        division(calculatorBean, String.valueOf(calculatorController.division(calculatorBean)), "Impossible division");
                         break;
                     case "3":
                         askPrint(printFirstAddendum);
@@ -69,24 +64,14 @@ public class CalculatorControllerG {
                         askPrint(printFirstAddendum);
                         firstAddendum = reader.readLine();
                         calculatorBean.setFirstAddendum(firstAddendum);
-                        if (calculatorBean.validation()) {
-                            LinePrinter.print(String.valueOf(calculatorController.logarithm(calculatorBean)));
-                        } else {
-                            toPrint = "Impossible logarithm";
-                            LinePrinter.print(toPrint);
-                        }
+                        division(calculatorBean, String.valueOf(calculatorController.logarithm(calculatorBean)), "Impossible logarithm");
                         break;
 
                     case "5":
                         askPrint(printFirstAddendum);
                         firstAddendum = reader.readLine();
                         calculatorBean.setFirstAddendum(firstAddendum);
-                        if (calculatorBean.validation()) {
-                            LinePrinter.print(String.valueOf(calculatorController.square(calculatorBean)));
-                        } else {
-                            toPrint = "Impossible square";
-                            LinePrinter.print(toPrint);
-                        }
+                        division(calculatorBean, String.valueOf(calculatorController.square(calculatorBean)), "Impossible square");
                         break;
                     default:
                         askPrint("No operations allowed. Closing app");
@@ -101,6 +86,16 @@ public class CalculatorControllerG {
             LinePrinter.print(toPrint);
         }
 
+    }
+
+    private static void division(CalculatorBean calculatorBean, String calculatorController, String toPrint1) {
+        String toPrint2;
+        if (calculatorBean.validation()) {
+            LinePrinter.print(calculatorController);
+        } else {
+            toPrint2 = toPrint1;
+            LinePrinter.print(toPrint2);
+        }
     }
 
     private void askPrint(String toPrint) {
